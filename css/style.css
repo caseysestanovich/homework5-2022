@@ -1,0 +1,170 @@
+header img{
+    animation: mymove 5s;
+}
+@keyframes mymove {
+    from {width: 25px; opacity: 0;}
+    to{width: 475px; opacity: 1;}    
+}
+
+body{
+    font-family: 'Poppins', serif;
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card > header{
+    background-color: #288088;
+    border: 2px solid #45ADAD ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 450px;
+}
+
+
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-basis: 450px;
+    flex-wrap: wrap;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+} /* when you go to mobile view, super slick is small?*/
+
+@media screen and (min-width: 900px){
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+    } 
+
+    nav{
+        position: fixed;
+        right: 5px;
+    } /* used this to align right...not flex though*/
+
+    .pricing {
+        display: flex;
+        flex-basis: 275px;
+    }
+
+    .card {
+        display: flex;
+        flex-basis: 275px;
+        width: 275px;
+        align-items: center;
+        
+    }
+
+    body > header{
+        position: fixed;
+        width: 200%;
+        top: 0px;
+    } 
+
+    main > h1 {
+        margin-top: 100px;
+    }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) { 
+
+
+    header img {
+        animation: none;
+    }
+
+}
+
+@media print {
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    nav{
+        width:80%;
+    } /* used this to  space correctly*/
+
+    #gallery{
+        display: none;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        
+    } /*how do u position on bottom*/
+
+    .card > header {
+        width: 325px;
+    }
+
+    .card {
+        display: flex;
+        flex-basis: 325px;
+        border: 2px solid #45ADDD;
+    }
+
+    .card {
+        content: \01F44D;
+    }
+    
+
+
+
+}
