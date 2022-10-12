@@ -36,7 +36,6 @@ a {
     padding-bottom: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    width: 450px;
 }
 
 
@@ -48,9 +47,7 @@ a {
 }
 
 .card {
-    display: flex;
     flex-basis: 450px;
-    flex-wrap: wrap;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -90,13 +87,12 @@ a {
 
     .pricing {
         display: flex;
-        flex-basis: 275px;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     .card {
-        display: flex;
         flex-basis: 275px;
-        width: 275px;
         align-items: center;
         
     }
@@ -139,7 +135,6 @@ a {
     }
 
     .pricing{
-        /* display: flex; */
         align-items: flex-end;
         flex-direction:row;
         flex-wrap: nowrap;
@@ -152,10 +147,6 @@ a {
 
     .gallery{
         display: none;
-    }
-
-    .card > header {
-        width: 325px;
     }
 
     .card {
