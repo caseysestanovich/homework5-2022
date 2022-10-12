@@ -1,3 +1,6 @@
+/*MOBILE/DEFAULT VIEW */
+
+/* Step 1: Animate the logo with keyframes*/
 header img{
     animation: mymove 5s;
 }
@@ -6,29 +9,34 @@ header img{
     to{width: 475px; opacity: 1;}    
 }
 
+/* Step 2: Poppins font with backup and colors for background*/
 body{
     font-family: 'Poppins', serif;
     background-image: url(../images/concrete_seamless.png);
     background-color: #f1f1f1;
+
 }
 
+/*Step 3*/
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*Step 4*/
 .nav_links{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*Step 5: I choe blue because of it is the universal link color*/
 a {
     color: #0000FF;
 }
 
-
+/*Step 6: direct children of card class styled*/
 .card > header{
     background-color: #288088;
     border: 2px solid #45ADAD ;
@@ -38,7 +46,7 @@ a {
     border-top-right-radius: 50px;
 }
 
-
+/*Step 7 and 8 combined*/
 .pricing {
     display: flex;
     align-items: center;
@@ -52,6 +60,7 @@ a {
     border-top-right-radius: 50px;
 }
 
+/*Step 9 and 10: styled gallery images and class*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -61,10 +70,13 @@ a {
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
-} /* when you go to mobile view, super slick is small?*/
+} 
+
+/*LARGE SCREEN*/
 
 @media screen and (min-width: 900px){
 
+    /* Step 11*/
     header {
         display: flex;
         flex-direction: row;
@@ -77,14 +89,14 @@ a {
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
-    
     } 
 
     nav{
         position: fixed;
         right: 5px;
-    } /* used this to align right...not flex though*/
+    } 
 
+    /*Step 12*/
     .pricing {
         display: flex;
         flex-direction: row;
@@ -97,6 +109,7 @@ a {
         
     }
 
+    /*Step 13: keep header always visible*/
     body > header{
         position: fixed;
         width: 200%;
@@ -108,22 +121,26 @@ a {
     }
 
 }
-
+/* REDUCED MOTION*/
 @media screen and (prefers-reduced-motion: reduce) { 
 
-
+    /*Step 14: turns off keyframe animation*/
     header img {
         animation: none;
     }
 
 }
 
+/*PRINT VIEW*/
 @media print {
+
+    /*Step 15 and 16: changing fonts and images for background*/
     body{
         font-family: Arial, Helvetica;
         background-image: none;
     }
 
+    /*Step 17: Rearrange nav links*/
     .nav_links{
         display: flex;
         flex-direction: row;
@@ -134,13 +151,20 @@ a {
         width:80%;
     }
 
+    /*Step 18: aligns at bottom of page in print view -- Jackie helped me finally achieve this in office hours*/
     .pricing{
         align-items: flex-end;
         flex-direction:row;
-        flex-wrap: nowrap;
-               
-    } /*how do u position on bottom*/
+        flex-wrap: nowrap;         
+    } 
 
+    /*Step 19: edits card class*/
+    .card {
+        flex-basis: 325px;
+        border: 2px solid #45ADDD;
+    }
+
+    /*Step 20: Hides all of gallery*/
     #gallery{
         display: none;
     }
@@ -149,11 +173,7 @@ a {
         display: none;
     }
 
-    .card {
-        flex-basis: 325px;
-        border: 2px solid #45ADDD;
-    }
-
+    /*Step 21: the emoji is added in print view*/
     .card li:nth-child(2)::after {
         content: "\01F44D";
     }
